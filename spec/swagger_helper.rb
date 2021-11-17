@@ -19,18 +19,13 @@ RSpec.configure do |config|
       openapi: '3.0.1',
       info: {
         title: 'API V1',
-        version: 'v1'
+        version: 'v1',
       },
       paths: {},
       servers: [
         {
-          url: 'https://{defaultHost}',
-          variables: {
-            defaultHost: {
-              default: 'api.2nd-community.com'
-            }
-          }
-        }
+          url: 'http://localhost:3000'
+        },
       ]
     }
   }
