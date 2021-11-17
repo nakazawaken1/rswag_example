@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Rails server",
+          "type": "Ruby",
+          "request": "attach",
+          "cwd": "${workspaceRoot}",
+          "remoteWorkspaceRoot": "/app",
+          "remoteHost": "0.0.0.0",
+          "remotePort": "1234"
+      }
+  ]
+}
