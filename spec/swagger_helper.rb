@@ -26,7 +26,17 @@ RSpec.configure do |config|
         {
           url: 'http://localhost:3000'
         },
-      ]
+      ],
+      components: {
+        securitySchemes: {
+          Bearer: {
+            description: 'token necessary to use API calls',
+            type: :apiKey,
+            name: 'Authorization',
+            in: :header
+          }
+        }
+      }
     }
   }
 

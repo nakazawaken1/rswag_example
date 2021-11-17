@@ -7,6 +7,8 @@ paths:
   "/api/v1/todos":
     get:
       summary: get todo list
+      security:
+      - Bearer: {}
       responses:
         '200':
           description: todo list
@@ -26,3 +28,10 @@ paths:
                   - done
 servers:
 - url: http://localhost:3000
+components:
+  securitySchemes:
+    Bearer:
+      description: token necessary to use API calls
+      type: apiKey
+      name: Authorization
+      in: header
