@@ -2,6 +2,8 @@ require 'swagger_helper'
 
 RSpec.describe 'api/v1/todos', type: :request do
 
+  let(:Authorization) { 'Barer abcdefg123456' }
+
   path '/api/v1/todos' do
 
     get 'get todo list' do
@@ -15,7 +17,7 @@ RSpec.describe 'api/v1/todos', type: :request do
             name: { type: :string },
             done: { type: :boolean },
           },
-          required: ['name', 'done']
+          required: [:name, :done]
         }
         run_test!
       end
