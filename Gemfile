@@ -22,8 +22,7 @@ end
 
 group :development do
   gem 'listen', '~> 3.3'
-  gem 'debase', '0.2.5.beta2'
-  gem 'ruby-debug-ide', '~> 0.7.2'
+  gem 'debug'
 end
 
 group :test do
